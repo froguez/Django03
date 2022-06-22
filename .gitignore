@@ -1,0 +1,31 @@
+.idea/
+__pycache__/
+venv/
+*.swp
+*.un~
+*.log
+local_settings.py
+dev_local_settings.py
+dev_pro_settings.py
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+# Django #
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Backup files # 
+*.bak 
