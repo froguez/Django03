@@ -42,9 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'flightApp.apps.flightAppConfig',
+    'rest_framework.authtoken',
+    'flightApp',
 ]
 
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+    'rest_framework.authentication.TokenAuthentication'
+    ]
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
