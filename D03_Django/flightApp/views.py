@@ -40,14 +40,14 @@ class FlightViewSet(viewsets.ModelViewSet):
     queryset=Flight.objects.all()
     serializer_class=FlightSerializer
 
-class PassengerViewSet(viewsets.ModelViewSet):
-    queryset=Passenger.objects.all()
-    serializer_class=PassengerSerializer
-
     filter_backends = [filters.SearchFilter]
     search_fields = ['departureCity', 'arrivalCity', 'dateOfDeparture']
 
     permission_classes = (IsAuthenticated,)
+
+class PassengerViewSet(viewsets.ModelViewSet):
+    queryset=Passenger.objects.all()
+    serializer_class=PassengerSerializer
 
 class ReservationViewSet(viewsets.ModelViewSet):
     queryset=Reservation.objects.all()
