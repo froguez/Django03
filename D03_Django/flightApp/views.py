@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 def find_flights(request):
     flights=Flight.objects.filter(departureCity=request.data['departureCity'],
                                    arrivalCity=request.data['arrivalCity'],
-                                   dateofDeparture=request.data['dateOfDeparture'])
+                                   dateOfDeparture=request.data['dateOfDeparture'])
     serializer=FlightSerializer(flights, many=True)
     return Response(serializer.data)
 
