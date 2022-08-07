@@ -9,7 +9,7 @@ from django.conf import settings
 class Flight(models.Model):
     flightNumber=models.CharField(max_length=10)
     operationAirlines=models.CharField(max_length=20)
-    departureCity=models.CharField(max_length=20,blank=True,null=True)
+    departureCity=models.CharField(max_length=20)
     arrivalCity=models.CharField(max_length=20)
     dateOfDeparture=models.DateField()
     estimatedTimeOfDeparture=models.TimeField()
